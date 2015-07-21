@@ -35,7 +35,11 @@
 #
 # Copyright 2011 Your name here, unless otherwise noted.
 #
-class yumgroup {
+class yumgroup (
+  $groupid        = $yumgroup::params::groupid,
+  $package_types  = $yumgroup::params::package_types,
+  $ensure  = $yumgroup::params::ensure,
+) inherits yumgroup::params {
 
 
 # https://github.com/puppetlabs/puppetlabs-stdlib -> parsejson

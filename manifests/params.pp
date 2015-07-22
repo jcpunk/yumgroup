@@ -7,6 +7,6 @@ class yumgroup::params {
   }
 
   $groupid       = [ ]
-  $package_types = ['mandatory']
+  $package_types = ['mandatory', 'default']
   $ensure        = 'present'
 }

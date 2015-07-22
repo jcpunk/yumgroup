@@ -1,4 +1,4 @@
-# == Class: yumgroup
+# == Define: yumgroup
 #
 # Full description of class yumgroup here.
 #
@@ -35,11 +35,17 @@
 #
 # Copyright 2011 Your name here, unless otherwise noted.
 #
-class yumgroup (
+define yumgroup (
   $groupid        = $yumgroup::params::groupid,
   $package_types  = $yumgroup::params::package_types,
   $ensure  = $yumgroup::params::ensure,
 ) inherits yumgroup::params {
+
+  validate_array($groupid)
+  validate_array($package_types)
+
+  # re values from https://docs.puppetlabs.com/references/latest/type.html#package-attribute-ensure
+  validate_re($ensure, ['^installed', '^absent', '^purged', '^held', '^latest'])
 
 
 # https://github.com/puppetlabs/puppetlabs-stdlib -> parsejson

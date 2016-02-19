@@ -1,0 +1,20 @@
+{
+      "name": "jcpunk-yumgroup",
+      "version": "0.1.0",
+      "author": "Pat Riehecky",
+      "license": "Apache-2.0",
+      "summary": "A module for yum groups",
+      "source": "https://github.com/examplecorp/examplecorp-mymodule",
+      "project_page": "https://github.com/examplecorp/examplecorp-mymodule",
+      "issues_url": "https://github.com/examplecorp/examplecorp-mymodules/issues",
+      "tags": ["yum"],
+      "operatingsystem_support": [
+        { "operatingsystem":"RedHat",      "operatingsystemrelease": [ "5", "6", "7" ] },
+        { "operatingsystem":"Scientific",  "operatingsystemrelease": [ "5", "6", "7" ] },
+        { "operatingsystem":"CentOS",      "operatingsystemrelease": [ "5", "6", "7" ] },
+        { "operatingsystem":"OracleLinux", "operatingsystemrelease": [ "5", "6", "7" ] }
+      ],
+  "dependencies": [
+    { "name": "puppetlabs/stdlib", "version_requirement": ">=3.2.0 <5.0.0" }
+  ]
+}

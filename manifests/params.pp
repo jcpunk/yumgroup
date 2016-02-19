@@ -1,12 +1,12 @@
 class yumgroup::params {
 
   if $::osfamily == 'RedHat' and $::operatingsystem == 'Fedora' {
-    fail('This module has not been verified under fedora.')
+    fail('This module has not been verified under Fedora.')
   } elsif $::osfamily != 'RedHat' {
-    fail('This module has not been verified under osfamily other than RedHat')
+    fail('This module has not been verified under an osfamily other than RedHat')
   }
 
-  $groupid       = [ ]
+  $groupid       = ['base', 'core' ]
   $package_types = ['mandatory', 'default']
   $ensure        = 'present'
 }

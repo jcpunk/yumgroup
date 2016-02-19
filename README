@@ -2,6 +2,8 @@
 
 This is a quick and dirty wrapper around yum groups in puppet
 
+puppet apply --modulepath ./modules -e 'include yumgroup'
+
 License
 -------
 APL v2.0

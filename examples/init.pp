@@ -8,9 +8,8 @@
 #
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
-class {'yumgroup':
-  groupid => ['base'],
-  package_types => ['mandatory', 'default', 'optional'],
-  ensure => 'present',
-}
+include yumgroup::base
 
+include yumgroup::base::mandatory
+include yumgroup::base::default
+include yumgroup::base::optional
